@@ -29,6 +29,11 @@ begin
 rescue ActiveRecord::PendingMigrationError => e
   abort e.to_s.strip
 end
+
+# 定ファイル義を見つける順番
+# see: https://thoughtbot.github.io/factory_bot/ref/find_definitions.html
+# FactoryBot.definition_file_paths += [Rails.root.join('spec', 'factories')]
+
 RSpec.configure do |config|
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_paths = [
