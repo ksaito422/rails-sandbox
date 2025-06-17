@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+foreman start -f Procfile -m all=1,web=0 <&0 &
+bin/rails server "$@"
