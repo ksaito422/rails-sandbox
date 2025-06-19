@@ -14,10 +14,17 @@
                 </div>
                 <div class="card-body">
                   <p class="card-text">サンプルのバックグラウンドジョブを実行します</p>
-                  <button class="btn btn-primary" disabled>
-                    <i class="fas fa-play"></i> Sample Job実行
-                  </button>
-                  <small class="text-muted d-block mt-2">※ 実装予定</small>
+                  <%= form_with url: run_sample_job_jobs_path, method: :post, local: true, class: "mb-3" do |form| %>
+                    <div class="row mb-2">
+                      <div class="col-md-6">
+                        <%= form.text_field :name, placeholder: "名前", class: "form-control", value: "Test User" %>
+                      </div>
+                      <div class="col-md-6">
+                        <%= form.number_field :count, placeholder: "カウント", class: "form-control", value: 1, min: 1 %>
+                      </div>
+                    </div>
+                    <%= form.submit "Sample Job実行", class: "btn btn-primary" %>
+                  <% end %>
                 </div>
               </div>
             </div>
