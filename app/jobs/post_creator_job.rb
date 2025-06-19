@@ -1,4 +1,4 @@
-class PostCreator
+class PostCreatorJob
   include Sidekiq::IterableJob
 
   def build_enumerator(start_at, count, **kwargs)
