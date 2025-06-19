@@ -4,6 +4,6 @@ class SampleJob
 
   def perform(name, count)
     sleep 3.minutes
-    puts("Doing hard work for #{name} with #{count}")
+    logger.info("Performing job for #{name} with count #{count}")
   end
 end
