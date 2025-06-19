@@ -15,4 +15,5 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   root "application#index"
   resources :posts, only: [:index]
+  resources :jobs, only: [:index]
 end

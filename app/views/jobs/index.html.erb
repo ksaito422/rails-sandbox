@@ -1,0 +1,70 @@
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-10">
+      <div class="card shadow">
+        <div class="card-header bg-primary text-white">
+          <h2 class="mb-0">⚙️ Sidekiq Job Control Panel</h2>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="card bg-light mb-3">
+                <div class="card-header">
+                  <h5 class="mb-0">📝 Sample Job</h5>
+                </div>
+                <div class="card-body">
+                  <p class="card-text">サンプルのバックグラウンドジョブを実行します</p>
+                  <button class="btn btn-primary" disabled>
+                    <i class="fas fa-play"></i> Sample Job実行
+                  </button>
+                  <small class="text-muted d-block mt-2">※ 実装予定</small>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-md-6">
+              <div class="card bg-light mb-3">
+                <div class="card-header">
+                  <h5 class="mb-0">📮 Post Creator Job</h5>
+                </div>
+                <div class="card-body">
+                  <p class="card-text">Post作成のバックグラウンドジョブを実行します</p>
+                  <button class="btn btn-success" disabled>
+                    <i class="fas fa-plus"></i> Post作成Job実行
+                  </button>
+                  <small class="text-muted d-block mt-2">※ 実装予定</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="row mt-4">
+            <div class="col-12">
+              <div class="card bg-info text-white">
+                <div class="card-body">
+                  <h5 class="card-title">📊 Job Monitor</h5>
+                  <p class="card-text">Sidekiq Web UIでジョブの実行状況を監視できます</p>
+                  <a href="/sidekiq" class="btn btn-light" target="_blank">
+                    <i class="fas fa-external-link-alt"></i> Sidekiq Web UI を開く
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="row mt-4">
+            <div class="col-12">
+              <div class="alert alert-warning">
+                <strong>⚠️ 注意:</strong> 
+                ジョブの実行機能は現在準備中です。ボタンは表示のみで、実際の処理は実装されていません。
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-footer">
+          <%= link_to "← トップページに戻る", root_path, class: "btn btn-secondary" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,2 +1,38 @@
-<h1>Welcome</h1>
-<%= link_to "Posts", posts_path, class: "btn btn-primary" %>
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="card shadow">
+        <div class="card-body text-center">
+          <h1 class="display-4 text-primary mb-4">🚀 Rails Sandbox</h1>
+          <p class="lead text-muted mb-4">開発・実験用のRailsアプリケーション環境</p>
+          
+          <div class="row mb-4">
+            <div class="col-md-6">
+              <div class="card bg-light">
+                <div class="card-body">
+                  <h5 class="card-title">📝 Posts</h5>
+                  <p class="card-text">投稿機能のテスト</p>
+                  <%= link_to "Posts一覧", posts_path, class: "btn btn-primary" %>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card bg-light">
+                <div class="card-body">
+                  <h5 class="card-title">⚙️ Sidekiq Jobs</h5>
+                  <p class="card-text">バックグラウンドジョブ実行</p>
+                  <%= link_to "Job Control Panel", jobs_path, class: "btn btn-success" %>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="alert alert-info">
+            <strong>🔧 開発環境:</strong> Ruby on Rails <%= Rails.version %> | 
+            環境: <%= Rails.env.capitalize %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
