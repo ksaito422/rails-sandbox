@@ -20,10 +20,9 @@ ActiveRecord::Base.connection.reset_pk_sequence!('comments')
 ActiveRecord::Base.connection.reset_pk_sequence!('tags')
 ActiveRecord::Base.connection.reset_pk_sequence!('post_tags')
 
-# Create Users (10,000 users for large dataset testing)
 puts "Creating users..."
 users = []
-1000.times do |i|
+100000.times do |i|
   users << {
     name: "User #{i + 1}",
     email: "user#{i + 1}@example.com",
