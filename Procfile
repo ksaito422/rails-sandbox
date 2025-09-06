@@ -1,2 +1,2 @@
-wep: bundle exec rails s
-job: bundle exec sidekiq
+web: bin/rails s
+worker: bundle exec sidekiq
